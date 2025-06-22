@@ -1,0 +1,29 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: dormhub
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/dormhub
+    username: dormhub
+    password: dormhub
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  flyway:
+    locations: classpath:db/migration
+    default-schema: public
+logging:
+  level:
+    org.springframework.messaging: DEBUG
+    org.springframework.web.socket: DEBUG
+
+key-store:
+  path: /home/vasya/Documents/DormHub/DormHub/src/main/resources/keystore
+  password: dCV3iO3Q42Di
+  entries:
+    jwt: 36Xqegu75yEe
+    password: foE6fL3329qT

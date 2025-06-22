@@ -1,0 +1,4 @@
+alter table equipment_location
+drop constraint equipment_location_equipment_id_fkey,
+add constraint equipment_location_equipment_id_fkey
+foreign key (equipment_id)references equipment(id)on delete cascade;
